@@ -1,1 +1,3 @@
-Working
+Explaination of the Whole Idea
+
+
