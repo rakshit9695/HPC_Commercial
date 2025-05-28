@@ -1,0 +1,19 @@
+This image is a line plot showing the solar power 
+generation profile for your simulated solar farm over a 24-hour period (from midnight April 18 to midnight April 19, 2025).
+
+Interpretation
+Nighttime (Before ~6 AM & After ~6 PM):
+    Solar generation is zero—the line sits at the bottom of the chart, indicating no sunlight and thus no power produced.
+
+Morning (Around 6 AM):
+    The line begins to rise sharply, showing the sunrise effect as the solar panels start generating electricity.
+
+Daytime (6 AM to 6 PM):
+    Solar output increases rapidly after sunrise, peaking around midday (12–1 PM).
+    The output fluctuates between 50–60 MW at its highest, reflecting both the solar farm’s capacity and realistic day-to-day variability (the jaggedness/noise is due to simulated cloud cover or atmospheric effects).
+    After midday, the output gradually decreases as the sun lowers in the sky.
+
+Evening (After 6 PM):
+    The line drops steeply back to zero, showing sunset and the end of solar generation for the day.
+
+

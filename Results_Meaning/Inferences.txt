@@ -1,0 +1,34 @@
+1. Solar Integration Effectiveness
+    Average Solar Offset: 54.1% of the data center's power needs were met by solar energy during the simulation period.
+    Peak Solar Offset: 100% solar coverage was achieved at times, demonstrating the potential for full renewable energy reliance during peak solar generation hours.
+    Carbon Savings: Solar power reduced emissions by 86,119 kg CO₂, while grid reliance resulted in 4,305 kg CO₂ emissions.
+    Recommendation: Add 1–2 more solar farms to increase average solar offset to 75–90%.
+                    Integrate battery storage to store excess solar energy for nighttime/cloudy periods.
+
+2. Energy Consumption Profile
+    Average Power: 1,934.6 kW (≈1.9 MW)
+    Peak Power: 2,197.4 kW (≈2.2 MW)
+    Implications: The data center operates at ~88% of peak capacity on average, indicating high utilization.
+                Power spikes suggest opportunities for load balancing or dynamic power capping to reduce peaks.
+
+3. Environmental Impact
+    Solar Contribution: Avoided 86,119 kg CO₂ (95% of total potential emissions).
+    Remaining Emissions: 4,305 kg CO₂ from grid power during low solar availability.
+    Next Steps: Transition to a 100% renewable grid (e.g., Canadian hydroelectric) to eliminate residual emissions.
+            Explore waste heat recycling to improve PUE and reduce cooling needs.
+
+4. Comparison to Industry Benchmarks
+    Solar Offset:
+        Current: 54.1% (good)
+        Industry leaders: Google/Apple achieve 70–90% renewable coverage.
+
+    Carbon Intensity:
+        Current: ~0.22 kg CO₂/kWh (grid mix)
+        Target: 0.0 kg CO₂/kWh with full renewables.
+
+5. Cost Implications
+    Savings: Solar reduced grid energy costs by 54% (assuming $0.10/kWh grid vs. $0.03/kWh solar LCOE).
+    Payback Period: A 38.9 MW solar farm cost along with the Data Center (deployment cost) --> ~$58M (at $1.5/W). 
+        With 54% offset, payback occurs in 6–8 years.
+
+Solar Vs Wind (Exclusively??)
