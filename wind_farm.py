@@ -9,7 +9,7 @@ import numpy as np
 from scipy.interpolate import interp1d
 
 class WindFarm:
-    def __init__(self, capacity_MW=5715, rotor_radius_m=75, hub_height_m=120,
+    def __init__(self, capacity_MW=57, rotor_radius_m=75, hub_height_m=120,
                  region='Alberta', converter_type='DFIG', transmission_voltage_kV=500):
         """
         Initialize wind farm with Canadian operational parameters
