@@ -12,7 +12,7 @@ SIMULATION_STEPS = int(SIMULATION_DURATION_HOURS * 60 / TIME_STEP_MINUTES)  # 96
 
 # ================== HPC INFRASTRUCTURE ==================
 DATA_CENTER_TOTAL_POWER_MW = 2.0       # 2 MW medium-scale facility
-GRID_VOLTAGE_V = 13800                 # 13.8 kV medium voltage distribution
+GRID_VOLTAGE_V = 13800                 # 13.8 kV medium voltage distribution # This would work out with the procatical scenario
 
 NUM_RACKS = 40                         
 NODES_PER_RACK = 50                    # Optimized rack density
