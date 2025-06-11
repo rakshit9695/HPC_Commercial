@@ -43,6 +43,8 @@ DESIGN_PUE = 1.22                      # Realistic Canadian climate PUE
 COOLING_COP = 5.5                      # High-efficiency cooling
 TARGET_INLET_TEMP_C = 18               # Cold climate optimization
 MAX_DELTA_T_C = 12
+THERMAL_THROTTLING_THRESHOLD_C = 30    #Throttle servers if inlet           #NEW
+                                       #temp exceeds this      
 
 # ================== WIND INTEGRATION ==================
 WIND_FARM_RATED_CAPACITY_MW = 3.5      # 3.5 MW wind farm (realistic ratio)
@@ -51,12 +53,23 @@ TRANSMISSION_DISTANCE_KM = 1000          # Local wind farm proximity
 TRANSMISSION_VOLTAGE_KV = 34.5         # Standard distribution voltage
 TRANSMISSION_LOSS_PER_1000KM = 0.035   # 3.5% loss per 1000km
 
+# ================== BATTERY AND STORAGE ==================                 #NEW
+BATTERY_CAPACITY_MWH = 1.5             # Energy storage in MWh
+BATTERY_CHARGE_EFFICIENCY = 0.95
+BATTERY_DISCHARGE_EFFICIENCY = 0.95
+UPS_BACKUP_DURATION_MINUTES = 15       # Emergency backup time
+
 # ================== EMISSIONS FACTORS ==================
 GRID_EMISSIONS_FACTOR_KGCO2_MWH = 420  # Actual Alberta grid mix
 WIND_EMISSIONS_FACTOR_KGCO2_MWH = 11   # Lifecycle emissions
 
 # ================== SYSTEM UTILIZATION ==================
 DATA_CENTER_UTILIZATION = 0.85         # 85% average utilization
+
+# ================== SERVER DEGRADATION & AGING ==================            #NEW
+SERVER_AGE_YEARS = 2.0                    # Average node life
+PERFORMANCE_DEGRADATION_RATE = 0.01       # 1% loss in performance per year
+
 
 # ================== CONFIGURATION CLASS ==================
 class DataCenterConfig:
@@ -96,6 +109,13 @@ class DataCenterConfig:
         self.cooling_cop = COOLING_COP
         self.target_inlet_temp_C = TARGET_INLET_TEMP_C
         self.max_delta_T_C = MAX_DELTA_T_C
+         self.thermal_throttling_threshold_C = THERMAL_THROTTLING_THRESHOLD_C
+
+        # Battery
+        self.battery_capacity_MWh = BATTERY_CAPACITY_MWH
+        self.battery_charge_efficiency = BATTERY_CHARGE_EFFICIENCY
+        self.battery_discharge_efficiency = BATTERY_DISCHARGE_EFFICIENCY
+        self.ups_backup_duration_minutes = UPS_BACKUP_DURATION_MINUTES
 
         # Renewable integration
         self.wind_farm_rated_capacity_MW = WIND_FARM_RATED_CAPACITY_MW
@@ -107,6 +127,10 @@ class DataCenterConfig:
         # Sustainability metrics
         self.grid_emissions_factor_kgco2_mwh = GRID_EMISSIONS_FACTOR_KGCO2_MWH
         self.wind_emissions_factor_kgco2_mwh = WIND_EMISSIONS_FACTOR_KGCO2_MWH
+
+        # Degradation
+        self.server_age_years = SERVER_AGE_YEARS
+        self.performance_degradation_rate = PERFORMANCE_DEGRADATION_RATE
 
         # Operational parameters
         self.data_center_utilization = DATA_CENTER_UTILIZATION
